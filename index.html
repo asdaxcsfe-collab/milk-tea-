@@ -1,74 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>清甜茶语奶茶店</title>
-    <link rel="stylesheet" href="demo2.css"><style>
-/* 测试 CSS 是否生效 —— 如果生效，页面背景会变淡绿、标题会变蓝 */
-body { background: #e8fff3 !important; }
-h1 { color: #0b84ff !important; }
-.card { outline: 3px solid rgba(11,132,255,0.12) !important; }
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo2 页面</title>
+    <link rel="stylesheet" href="demo2.css">
 </head>
-
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- 顶部标题 -->
-        <h1 style="text-align:center; margin-bottom:4px;">清甜茶语奶茶店</h1>
-        <p style="text-align:center; color:var(--subtext); margin-bottom:30px;">每一杯，都愿温暖你的味蕾。</p>
+    <!-- 左侧侧边栏 -->
+    <aside class="sidebar">
+        <h2 class="logo">My Demo</h2>
+        <ul class="nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">作品展示</a></li>
+            <li><a href="#">课程笔记</a></li>
+            <li><a href="#">关于我</a></li>
+        </ul>
+    </aside>
 
-        <!-- 本店招牌 -->
-        <h2 class="section-title">本店招牌</h2>
+    <!-- 右侧内容区 -->
+    <main class="content">
+        <h1>欢迎来到 Demo2</h1>
+        <p>这是一个简单的前端模板示例。</p>
 
-        <div class="grid">
-            <!-- 1 -->
+        <div class="card-list">
             <div class="card">
-                <img src="微信图片_20251207194259_292_215.jpg" alt="黑糖珍珠鲜奶">
-                <h3 style="margin: 12px 0 6px;">黑糖珍珠鲜奶</h3>
-                <p style="color:var(--subtext);">￥12</p>
+                <h3>卡片 1</h3>
+                <p>这是卡片内容示例，你可以替换成课程作业要求的东西。</p>
             </div>
 
-            <!-- 2 -->
             <div class="card">
-                <img src="微信图片_20251207194345_293_215.jpg" alt="芒芒鲜果茶">
-                <h3 style="margin: 12px 0 6px;">芒芒鲜果茶</h3>
-                <p style="color:var(--subtext);">￥15</p>
+                <h3>卡片 2</h3>
+                <p>这里可以放图片、文字或你想展示的任何信息。</p>
             </div>
 
-            <!-- 3 -->
             <div class="card">
-                <img src="微信图片_20251207194412_294_215.jpg" alt="草莓芝芝">
-                <h3 style="margin: 12px 0 6px;">草莓芝芝</h3>
-                <p style="color:var(--subtext);">￥14</p>
+                <h3>卡片 3</h3>
+                <p>布局支持自动换行，适合做图片墙或项目展示。</p>
             </div>
         </div>
+    </main>
 
-        <!-- 店铺环境 -->
-        <h2 class="section-title" style="margin-top:45px;">店铺环境</h2>
-
-        <div class="card" style="padding:0;">
-            <img src="微信图片_20251207194931_298_215.jpg" alt="店铺环境" class="big-img">
-        </div>
-
-        <!-- 联系我们 -->
-        <h2 class="section-title" style="margin-top:45px;">联系我们</h2>
-
-        <div class="card info">
-            <p>📍 地址：*********</p>
-            <p>🕒 营业时间：10:00 - 23:00</p>
-            <p>📞 电话：*********</p>
-        </div>
-
-        <footer>
-            © 2025 清甜茶语奶茶店
-        </footer>
-
-    </div>
+</div>
 
 </body>
 </html>
-
