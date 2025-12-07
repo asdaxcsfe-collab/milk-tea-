@@ -1,93 +1,74 @@
-/* === Apple Style + Dark Mode === */
-
 :root {
-  --bg: #f5f7fb;
-  --card-bg: #ffffff;
-  --text: #1c1c1e;
-  --subtext: #6c6c70;
-  --shadow: 0 8px 24px rgba(0,0,0,0.06);
-  --radius: 22px;
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --subtext: #6e6e73;
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #000000;
-    --card-bg: #1c1c1e;
-    --text: #f5f5f7;
-    --subtext: #8e8e93;
-    --shadow: 0 8px 24px rgba(0,0,0,0.5);
-  }
+    :root {
+        --bg: #000000;
+        --card: #1c1c1e;
+        --text: #ffffff;
+        --subtext: #8e8e93;
+    }
 }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-    "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-  color: var(--text);
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue", sans-serif;
+    color: var(--text);
 }
 
-/* 页面容器 */
 .container {
-  width: 90%;
-  max-width: 1150px;
-  margin: 0 auto;
-  padding-top: 40px;
+    max-width: 880px;
+    margin: auto;
+    padding: 20px;
 }
 
-/* 标题 Apple 风 */
 .section-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  border-left: 4px solid #007aff;
-  padding-left: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 4px solid #007aff;
+    padding-left: 10px;
 }
 
-/* 卡片 Apple 风 */
-.card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
-  transition: 0.25s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-/* 图片圆角更柔和 */
-.card img {
-  width: 100%;
-  border-radius: var(--radius);
-}
-
-/* 三列布局 */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
-/* 店铺环境大图 */
+.card {
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    padding: 16px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
 .big-img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+    width: 100%;
+    border-radius: 12px;
 }
 
-/* 联系我们 */
 .info {
-  line-height: 1.8;
-  font-size: 15px;
-  color: var(--subtext);
+    line-height: 1.8;
 }
 
 footer {
-  padding: 40px 0;
-  text-align: center;
-  color: var(--subtext);
-  font-size: 14px;
+    text-align: center;
+    margin-top: 40px;
+    color: var(--subtext);
+    font-size: 14px;
 }
