@@ -3,61 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo2 - Apple Style</title>
-<link rel="stylesheet" href="style-demo2.css">
+    <title>清甜茶语奶茶店 · Demo2</title>
+    <link rel="stylesheet" href="demo2.css">
 </head>
 
 <body>
 
 <div class="layout">
 
-    <!-- 📌 左侧侧边栏 -->
+    <!-- ===== 左侧苹果风侧边栏 ===== -->
     <aside class="sidebar">
-        <div class="logo">🍎 Demo2</div>
-        <nav>
-            <a href="#">首页</a>
-            <a href="#">产品展示</a>
-            <a href="#">课程笔记</a>
-            <a href="#">关于我</a>
-        </nav>
+        <h2 class="logo">清甜茶语</h2>
+
+        <ul class="nav">
+            <li><a href="#">🏠 首页</a></li>
+            <li><a href="#">🧋 招牌奶茶</a></li>
+            <li><a href="#">🏪 店铺环境</a></li>
+            <li><a href="#">📞 联系我们</a></li>
+        </ul>
     </aside>
 
-    <!-- 📌 右侧内容区 -->
+    <!-- ===== 右侧内容区域（你的奶茶店内容） ===== -->
     <main class="content">
-        <header class="header">
-            <h1>欢迎来到 Demo2</h1>
-            <p>这是一个苹果风 + 暗黑模式 的前端作业模板。</p>
-            <button id="toggleDark">🌙 切换暗黑模式</button>
-        </header>
+        
+        <h1 class="main-title">清甜茶语奶茶店</h1>
+        <p class="subtext">每一杯，都愿温暖你的味蕾。</p>
 
-        <section class="card-grid">
+        <!-- ========== 本店招牌 ========== -->
+        <h2 class="section-title">本店招牌</h2>
 
+        <div class="grid">
             <div class="card">
-                <h3>示例卡片 1</h3>
-                <p>你可以在这里写课程、项目、随便什么。</p>
+                <img src="微信图片_20251207194259_292_215.jpg" alt="黑糖珍珠鲜奶">
+                <h3>黑糖珍珠鲜奶</h3>
+                <p class="price">￥12</p>
             </div>
 
             <div class="card">
-                <h3>示例卡片 2</h3>
-                <p>风格偏 Apple 官方网站：干净、留白、圆角。</p>
+                <img src="微信图片_20251207194345_293_215.jpg" alt="芒芒鲜果茶">
+                <h3>芒芒鲜果茶</h3>
+                <p class="price">￥15</p>
             </div>
 
             <div class="card">
-                <h3>示例卡片 3</h3>
-                <p>所有样式都在 demo2.css 中，你可自由修改。</p>
+                <img src="微信图片_20251207194412_294_215.jpg" alt="草莓芝芝">
+                <h3>草莓芝芝</h3>
+                <p class="price">￥14</p>
             </div>
+        </div>
 
-        </section>
+        <!-- ========== 店铺环境 ========== -->
+        <h2 class="section-title">店铺环境</h2>
+        <div class="card">
+            <img src="微信图片_20251207194931_298_215.jpg" alt="店铺环境">
+        </div>
+
+        <!-- ========== 联系我们 ========== -->
+        <h2 class="section-title">联系我们</h2>
+        <div class="info card">
+            <p>📍 地址：*********</p>
+            <p>🕒 营业时间：10:00 - 23:00</p>
+            <p>📞 电话：*********</p>
+        </div>
+
+        <footer class="footer">
+            © 2025 清甜茶语奶茶店
+        </footer>
+
     </main>
 
 </div>
 
-<script>
-    document.getElementById("toggleDark").onclick = () => {
-        document.documentElement.classList.toggle("dark");
-    }
-</script>
-
 </body>
 </html>
-
