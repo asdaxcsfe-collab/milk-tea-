@@ -1,111 +1,122 @@
-/* ======== 全局苹果风变量 ======== */
+/* ===== Apple 风格基础变量 ===== */
 :root {
     --bg: #ffffff;
-    --card-bg: #fafafa;
-    --text: #1c1c1e;
-    --subtext: #6e6e73;
-    --shadow: 0 8px 20px rgba(0,0,0,0.06);
+    --bg-secondary: #f5f5f7;
+    --text: #111111;
+    --card: #ffffff;
+    --sidebar: #f2f2f2;
     --radius: 18px;
-    --blur: saturate(180%) blur(20px);
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    --transition: 0.25s ease;
 }
 
-/* ======== 暗黑模式（自动跟系统） ======== */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #1c1c1e;
-        --card-bg: #2c2c2e;
-        --text: #f5f5f7;
-        --subtext: #b8b8bb;
-        --shadow: 0 6px 18px rgba(0,0,0,0.4);
-    }
+/* ===== Dark Mode ===== */
+.dark {
+    --bg: #000000;
+    --bg-secondary: #1c1c1e;
+    --text: #f5f5f7;
+    --card: #1c1c1e;
+    --sidebar: #161616;
+    --shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
 }
 
-/* ======== 页面基础苹果风 ======== */
+/* ===== 页面布局 ===== */
 body {
     margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
     background: var(--bg);
     color: var(--text);
+    transition: var(--transition);
 }
 
-.container {
-    width: 92%;
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 20px 0 60px;
+.layout {
+    display: flex;
 }
 
-/* ======== 标题 ======== */
-.section-title {
-    font-size: 22px;
-    margin: 25px 0 15px;
-    font-weight: 600;
+/* ===== 侧边栏 ===== */
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: var(--sidebar);
+    padding: 30px 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition);
 }
 
-/* ======== 卡片苹果风玻璃态 ======== */
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 10px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    font-size: 16px;
+}
+
+.sidebar nav a:hover {
+    background: var(--bg-secondary);
+}
+
+/* ===== 内容区 ===== */
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.header p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+#toggleDark {
+    padding: 10px 20px;
+    border: none;
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#toggleDark:hover {
+    background: var(--card);
+}
+
+/* ===== 卡片区 ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
 .card {
-    background: var(--card-bg);
+    background: var(--card);
+    padding: 24px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 16px;
-    overflow: hidden;
-    backdrop-filter: var(--blur);
-    -webkit-backdrop-filter: var(--blur);
-    transition: transform 0.25s ease, box-shadow 0.2s ease;
+    transition: var(--transition);
 }
 
-/* 悬停效果（苹果风微动效） */
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* ======== 图片 ======== */
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius);
-    display: block;
-}
-
-/* ======== 网格布局 ======== */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-}
-
-/* 手机布局 */
-@media (max-width: 650px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ======== 联系我们区域 ======== */
-.info p {
-    margin: 6px 0;
-    font-size: 15px;
-}
-
-/* ======== 页脚 ======== */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: var(--subtext);
-    font-size: 14px;
-    padding-bottom: 20px;
-}
-
-/* fix HTML 里写错的类（防止图片不显示） */
-img.微信图片_20251207194931_298_215.jpg {
-    width: 100%;
-    display: block;
-    border-radius: var(--radius);
+    transform: translateY(-5px);
 }
