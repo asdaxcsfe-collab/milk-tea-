@@ -1,78 +1,57 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>清甜茶语奶茶店 · Demo2</title>
-    <link rel="stylesheet" href="demo2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>奶茶店 Demo2</title>
+  <link rel="stylesheet" href="style-demo2.css" />
 </head>
-
 <body>
+  <header class="nav">
+    <h1 class="logo">Pearl Tea · 奶茶屋</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#menu">菜单</a></li>
+        <li><a href="#story">品牌故事</a></li>
+        <li><a href="#contact">联系我们</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="layout">
+  <section class="hero" id="home">
+    <h2>把好喝，做到极致。</h2>
+    <p>Apple 风格 · 极简 · 高档 · 奶茶体验</p>
+  </section>
 
-    <!-- ===== 左侧苹果风侧边栏 ===== -->
-    <aside class="sidebar">
-        <h2 class="logo">清甜茶语</h2>
+  <section class="cards" id="menu">
+    <h2 class="title">人气菜单</h2>
+    <div class="card-list">
+      <div class="card">
+        <img src="1.png" alt="奶茶1" />
+        <h3>丝滑原味奶茶</h3>
+        <p>顺滑浓郁 · 经典永不过时</p>
+      </div>
+      <div class="card">
+        <img src="1.png" alt="奶茶2" />
+        <h3>黑糖珍珠鲜奶</h3>
+        <p>Q弹黑糖珍珠 · 入口即化</p>
+      </div>
+      <div class="card">
+        <img src="1.png" alt="奶茶3" />
+        <h3>抹茶拿铁</h3>
+        <p>清香抹茶 · 奶味融合刚刚好</p>
+      </div>
+    </div>
+  </section>
 
-        <ul class="nav">
-            <li><a href="#">🏠 首页</a></li>
-            <li><a href="#">🧋 招牌奶茶</a></li>
-            <li><a href="#">🏪 店铺环境</a></li>
-            <li><a href="#">📞 联系我们</a></li>
-        </ul>
-    </aside>
+  <section class="story" id="story">
+    <h2 class="title">我们的故事</h2>
+    <p>我们坚持使用天然茶叶、优质鲜奶和手工熬煮黑糖。每一杯奶茶都是精心制作的艺术品。</p>
+  </section>
 
-    <!-- ===== 右侧内容区域（你的奶茶店内容） ===== -->
-    <main class="content">
-        
-        <h1 class="main-title">清甜茶语奶茶店</h1>
-        <p class="subtext">每一杯，都愿温暖你的味蕾。</p>
-
-        <!-- ========== 本店招牌 ========== -->
-        <h2 class="section-title">本店招牌</h2>
-
-        <div class="grid">
-            <div class="card">
-                <img src="微信图片_20251207194259_292_215.jpg" alt="黑糖珍珠鲜奶">
-                <h3>黑糖珍珠鲜奶</h3>
-                <p class="price">￥12</p>
-            </div>
-
-            <div class="card">
-                <img src="微信图片_20251207194345_293_215.jpg" alt="芒芒鲜果茶">
-                <h3>芒芒鲜果茶</h3>
-                <p class="price">￥15</p>
-            </div>
-
-            <div class="card">
-                <img src="微信图片_20251207194412_294_215.jpg" alt="草莓芝芝">
-                <h3>草莓芝芝</h3>
-                <p class="price">￥14</p>
-            </div>
-        </div>
-
-        <!-- ========== 店铺环境 ========== -->
-        <h2 class="section-title">店铺环境</h2>
-        <div class="card">
-            <img src="微信图片_20251207194931_298_215.jpg" alt="店铺环境">
-        </div>
-
-        <!-- ========== 联系我们 ========== -->
-        <h2 class="section-title">联系我们</h2>
-        <div class="info card">
-            <p>📍 地址：*********</p>
-            <p>🕒 营业时间：10:00 - 23:00</p>
-            <p>📞 电话：*********</p>
-        </div>
-
-        <footer class="footer">
-            © 2025 清甜茶语奶茶店
-        </footer>
-
-    </main>
-
-</div>
-
+  <footer class="footer" id="contact">
+    <p>© 2025 Pearl Tea 奶茶屋 · All Rights Reserved</p>
+  </footer>
 </body>
 </html>
